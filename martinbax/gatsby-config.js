@@ -1,8 +1,9 @@
 module.exports = {
+  pathPrefix: "/martinbax",
   siteMetadata: {
-    title: 'Gatsby Starter - Strata by HTML5 UP',
-    author: 'Hunter Chang',
-    description: 'A Gatsby.js Starter based on Strata by HTML5 UP',
+    title: 'Martin Bax',
+    author: 'Martin Bax',
+    description: 'Freelance Korean-English interpreter/translator',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
