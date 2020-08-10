@@ -1,126 +1,166 @@
-import React from 'react'
-import Helmet from 'react-helmet'
+import React from 'react';
 
-import Gallery from '../components/Gallery'
-import Layout from '../components/layout'
+import Layout from '../components/Layout';
 
-const HomeIndex = () => {
-  const siteTitle = 'Gatsby Starter - Strata'
-  const siteDescription = 'Site description'
+import pic1 from '../assets/images/pic01.jpg';
+import pic2 from '../assets/images/pic02.jpg';
+import pic3 from '../assets/images/pic03.jpg';
+import pic4 from '../assets/images/pic04.jpg';
+import pic5 from '../assets/images/pic05.jpg';
+import pic6 from '../assets/images/pic06.jpg';
+import pic7 from '../assets/images/pic07.jpg';
 
-  return (
-    <Layout>
-      <Helmet>
-        <title>{siteTitle}</title>
-        <meta name="description" content={siteDescription} />
-      </Helmet>
-
-      <div id="main">
-        <section id="one">
-          <header className="major">
-            <h2> I'm Marin Bax, a freelance Korean-English interpreter/translatior.</h2>
-          </header>
-          <p>
-            Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc
-            nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae
-            lobortis tortor primis integer massa adipiscing id nisi accumsan
-            pellentesque commodo blandit enim arcu non at amet id arcu magna.
-            Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate
-            lorem neque cubilia.
-          </p>
-          <ul className="actions">
-            <li>
-              <a href="#" className="button">
-                Learn More
-              </a>
-            </li>
-          </ul>
-        </section>
-
-        <section id="two">
-          <h2>Recent Work</h2>
-
-          <Gallery />
-
-          <ul className="actions">
-            <li>
-              <a href="#" className="button">
-                Full Portfolio
-              </a>
-            </li>
-          </ul>
-        </section>
-
-        <section id="three">
-          <h2>Get In Touch</h2>
-          <p>
-            Accumsan pellentesque commodo blandit enim arcu non at amet id arcu
-            magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem
-            vulputate lorem neque lorem ipsum dolor.
-          </p>
-          <div className="row">
-            <div className="8u 12u$(small)">
-              <form method="post" action="#">
-                <div className="row uniform 50%">
-                  <div className="6u 12u$(xsmall)">
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      placeholder="Name"
-                    />
-                  </div>
-                  <div className="6u 12u$(xsmall)">
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      placeholder="Email"
-                    />
-                  </div>
-                  <div className="12u">
-                    <textarea
-                      name="message"
-                      id="message"
-                      placeholder="Message"
-                      rows="4"
-                    ></textarea>
-                  </div>
-                </div>
-                <ul className="actions" style={{ marginTop: 30 }}>
-                  <li>
-                    <input type="submit" value="Send Message" />
-                  </li>
-                </ul>
-              </form>
-            </div>
-            <div className="4u 12u$(small)">
-              <ul className="labeled-icons">
-                <li>
-                  <h3 className="icon fa-home">
-                    <span className="label">Location</span>
-                  </h3>
-                  Seoul, South Korea
-                </li>
-                <li>
-                  <h3 className="icon fa-mobile">
-                    <span className="label">Phone</span>
-                  </h3>
-                  +82 10 4993 2406
-                </li>
-                <li>
-                  <h3 className="icon fa-envelope-o">
-                    <span className="label">Email</span>
-                  </h3>
-                  <a href="mailto:unspellablenick@gmail.com">unspellablenick@gmail.com</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
+import config from '../../config';
+const IndexPage = () => (
+  <Layout>
+    <section id="banner">
+      <div className="inner">
+        <div className="logo">
+          <span className="icon fa-diamond"></span>
+        </div>
+        <h2>{config.heading}</h2>
+        <p>{config.subHeading}</p>
       </div>
-    </Layout>
-  )
-}
+    </section>
 
-export default HomeIndex
+    <section id="wrapper">
+      <section id="one" className="wrapper spotlight style1">
+        <div className="inner">
+          <a href="/#" className="image">
+            <img src={pic1} alt="" />
+          </a>
+          <div className="content">
+            <h2 className="major">Magna arcu feugiat</h2>
+            <p>
+              Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
+              turpis ante, nullam sit amet turpis non, sollicitudin posuere
+              urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
+              dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla
+              cursus.
+            </p>
+            <a href="/#" className="special">
+              Learn more
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="two" className="wrapper alt spotlight style2">
+        <div className="inner">
+          <a href="/#" className="image">
+            <img src={pic2} alt="" />
+          </a>
+          <div className="content">
+            <h2 className="major">Tempus adipiscing</h2>
+            <p>
+              Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
+              turpis ante, nullam sit amet turpis non, sollicitudin posuere
+              urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
+              dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla
+              cursus.
+            </p>
+            <a href="/#" className="special">
+              Learn more
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="three" className="wrapper spotlight style3">
+        <div className="inner">
+          <a href="/#" className="image">
+            <img src={pic3} alt="" />
+          </a>
+          <div className="content">
+            <h2 className="major">Nullam dignissim</h2>
+            <p>
+              Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
+              turpis ante, nullam sit amet turpis non, sollicitudin posuere
+              urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim
+              dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla
+              cursus.
+            </p>
+            <a href="/#" className="special">
+              Learn more
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="four" className="wrapper alt style1">
+        <div className="inner">
+          <h2 className="major">Vitae phasellus</h2>
+          <p>
+            Cras mattis ante fermentum, malesuada neque vitae, eleifend erat.
+            Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis
+            egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus
+            in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.
+          </p>
+          <section className="features">
+            <article>
+              <a href="/#" className="image">
+                <img src={pic4} alt="" />
+              </a>
+              <h3 className="major">Sed feugiat lorem</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
+                nulla dignissim dapibus ultrices.
+              </p>
+              <a href="/#" className="special">
+                Learn more
+              </a>
+            </article>
+            <article>
+              <a href="/#" className="image">
+                <img src={pic5} alt="" />
+              </a>
+              <h3 className="major">Nisl placerat</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
+                nulla dignissim dapibus ultrices.
+              </p>
+              <a href="/#" className="special">
+                Learn more
+              </a>
+            </article>
+            <article>
+              <a href="/#" className="image">
+                <img src={pic6} alt="" />
+              </a>
+              <h3 className="major">Ante fermentum</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
+                nulla dignissim dapibus ultrices.
+              </p>
+              <a href="/#" className="special">
+                Learn more
+              </a>
+            </article>
+            <article>
+              <a href="/#" className="image">
+                <img src={pic7} alt="" />
+              </a>
+              <h3 className="major">Fusce consequat</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id
+                nulla dignissim dapibus ultrices.
+              </p>
+              <a href="/#" className="special">
+                Learn more
+              </a>
+            </article>
+          </section>
+          <ul className="actions">
+            <li>
+              <a href="/#" className="button">
+                Browse All
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </section>
+  </Layout>
+);
+
+export default IndexPage;

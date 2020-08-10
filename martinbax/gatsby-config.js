@@ -1,25 +1,26 @@
+const config = require('./config');
+
 module.exports = {
   pathPrefix: "/martinbax",
+  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    title: 'Martin Bax',
-    author: 'Martin Bax',
-    description: 'Freelance Korean-English interpreter/translator',
+    title: config.siteTitle,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
-        start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/assets/images/website-icon.png', // This path is relative to the root of the site.
+        name: config.manifestName,
+        short_name: config.manifestShortName,
+        start_url: config.pathPrefix || config.manifestStartUrl,
+        background_color: config.manifestBackgroundColor,
+        theme_color: config.manifestThemeColor,
+        display: config.manifestDisplay,
+        icon: config.manifestIcon, // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
   ],
-}
+};
