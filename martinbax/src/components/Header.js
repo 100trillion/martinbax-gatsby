@@ -9,13 +9,8 @@ const Header = () => (
       <a href="#" className="image avatar">
         <img src={avatar} alt="" />
       </a>
-      <h1>
-        <strong>I am Strata</strong>, a super simple
-        <br />
-        responsive site template freebie
-        <br />
-        crafted by <a href="http://html5up.net">HTML5 UP</a>.
-      </h1>
+      <h1><strong>Marin Bax</strong></h1>
+        <p>Korean-English interpreter/translator</p>
     </div>
     <Footer />
   </header>
